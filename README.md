@@ -9,4 +9,4 @@ This is the CEF code of the child process for BLUI. **It's not recommended to me
 * Replace the code in CefSimple with the code in this repository, the original project has some configuration that needs to be kept for output to work correctly.
 * Build the solution, and it will produce the proper dlls, lib files, and the child process exe in the folder called "out".
 
-(Again, I don't recommend this, I will be distributing the correct binaries in BLUI released on [It's repo page!](https://github.com/aaron524/BLUI)
+(Again, I don't recommend this, I will be distributing the correct binaries in BLUI releases on [It's repo page!](https://github.com/aaron524/BLUI))
