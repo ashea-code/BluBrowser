@@ -110,3 +110,4 @@ void BluHandler::CloseAllBrowsers(bool force_close) {
   for (; it != browser_list_.end(); ++it)
     (*it)->GetHost()->CloseBrowser(force_close);
 }
+

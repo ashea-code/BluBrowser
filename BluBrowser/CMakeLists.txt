@@ -8,10 +8,10 @@
 
 # cefsimple sources.
 set(CEFSIMPLE_SRCS
-  simple_app.cpp
-  simple_app.h
-  simple_handler.cpp
-  simple_handler.h
+  blubrowser_app.cpp
+  blubrowser_app.h
+  blu_handler.cpp
+  blu_handler.h
   )
 set(CEFSIMPLE_SRCS_LINUX
   cefsimple_linux.cpp
@@ -23,10 +23,10 @@ set(CEFSIMPLE_SRCS_MACOSX
   )
 set(CEFSIMPLE_SRCS_WINDOWS
   cefsimple.exe.manifest
-  cefsimple.rc
-  cefsimple_win.cpp
+  blu.rc
+  blubrowser_win.cpp
   resource.h
-  simple_handler_win.cpp
+  blu_handler_win.cpp
   )
 APPEND_PLATFORM_SOURCES(CEFSIMPLE_SRCS)
 source_group(cefsimple FILES ${CEFSIMPLE_SRCS})

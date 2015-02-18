@@ -43,12 +43,11 @@ void BluBrowser::OnContextInitialized() {
       CefCommandLine::GetGlobalCommandLine();
   url = command_line->GetSwitchValue("url");
   if (url.empty())
-    url = "file:///C:/Users/Aaron%20Shea/Desktop/test.html";
+    url = "chrome://flags";
 
   // Create the first browser window.
   CefBrowserHost::CreateBrowser(window_info, handler.get(), url,
                                 browser_settings, NULL);
-
 
 }
 
@@ -66,4 +65,9 @@ void BluBrowser::OnContextCreated(CefRefPtr<CefBrowser> browser,
 
 	// Add the string to the window object as "window.myval". See the "JS Objects" section below.
 	object->SetValue("blu_event", func, V8_PROPERTY_ATTRIBUTE_NONE);
+}
+
+void BluBrowser::OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line)
+{
+
 }
