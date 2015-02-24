@@ -5,17 +5,19 @@
 #
 # Source files.
 #
-
+set(CMAKE_CXX_FLAGS "-fpermissive -std=c++0x")
 # cefsimple sources.
 set(CEFSIMPLE_SRCS
   blubrowser_app.cpp
   blubrowser_app.h
   blu_handler.cpp
   blu_handler.h
+  script_handler.cpp
+  script_handler.h
   )
 set(CEFSIMPLE_SRCS_LINUX
-  cefsimple_linux.cpp
-  simple_handler_linux.cpp
+  cefsimple_linux.cc
+  simple_handler_linux.cc
   )
 set(CEFSIMPLE_SRCS_MACOSX
   cefsimple_mac.mm

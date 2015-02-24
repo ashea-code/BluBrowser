@@ -32,7 +32,7 @@ class BluBrowser : public CefApp,
 		 CefRefPtr<CefFrame> frame,
 		 CefRefPtr<CefV8Context> context) OVERRIDE;
 
-  virtual void OnBeforeCommandLineProcessing(const CefString& process_type, 
+  virtual void OnBeforeCommandLineProcessing(const CefString& process_type,
 												CefRefPtr< CefCommandLine > command_line) OVERRIDE;
 
   BluScriptHandler* handler;

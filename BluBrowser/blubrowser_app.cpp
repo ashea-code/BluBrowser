@@ -11,6 +11,7 @@
 #include "include/cef_browser.h"
 #include "include/cef_command_line.h"
 #include "include/wrapper/cef_helpers.h"
+#include "cefsimple/script_handler.h"
 
 BluBrowser::BluBrowser() {
 }
@@ -55,6 +56,7 @@ void BluBrowser::OnContextCreated(CefRefPtr<CefBrowser> browser,
 	CefRefPtr<CefFrame> frame,
 	CefRefPtr<CefV8Context> context)
 {
+
 	// no handler yet, we need to create it first
 	handler = new BluScriptHandler(browser);
 
