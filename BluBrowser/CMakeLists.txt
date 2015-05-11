@@ -193,7 +193,7 @@ if(OS_WINDOWS)
   endif()
 
   # Add the custom manifest files to the executable.
-  ADD_WINDOWS_MANIFEST("${CEF_TARGET}")
+  ADD_WINDOWS_MANIFEST("${CEF_TARGET}", "${CEF_TARGET}")
 
   # Copy binary and resource files to the target output directory.
   COPY_FILES("${CEF_TARGET}" "${CEF_BINARY_FILES}" "${CEF_BINARY_DIR}" "${CEF_TARGET_OUT_DIR}")

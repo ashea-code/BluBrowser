@@ -44,7 +44,7 @@ void BluBrowser::OnContextInitialized() {
       CefCommandLine::GetGlobalCommandLine();
   url = command_line->GetSwitchValue("url");
   if (url.empty())
-    url = "chrome://flags";
+    url = "about:version";
 
   // Create the first browser window.
   CefBrowserHost::CreateBrowser(window_info, handler.get(), url,
@@ -53,28 +53,18 @@ void BluBrowser::OnContextInitialized() {
 }
 
 void BluBrowser::OnContextCreated(CefRefPtr<CefBrowser> browser,
-  CefRefPtr<CefFrame> frame,
-  CefRefPtr<CefV8Context> context)
+	CefRefPtr<CefFrame> frame,
+	CefRefPtr<CefV8Context> context)
 {
 
-  // no handler yet, we need to create it first
-  handler = new BluScriptHandler(browser);
+	// no handler yet, we need to create it first
+	handler = new BluScriptHandler(browser);
 
-  // Retrieve the context's window object.
-  CefRefPtr<CefV8Value> object = context->GetGlobal();
+	// Retrieve the context's window object.
+	CefRefPtr<CefV8Value> object = context->GetGlobal();
 
-  CefRefPtr<CefV8Value> func = CefV8Value::CreateFunction("blu_event", handler);
+	CefRefPtr<CefV8Value> func = CefV8Value::CreateFunction("blu_event", handler);
 
-  // Add the string to the window object as "window.myval". See the "JS Objects" section below.
-  object->SetValue("blu_event", func, V8_PROPERTY_ATTRIBUTE_NONE);
-}
-
-void BluBrowser::OnBeforeCommandLineProcessing(const CefString& process_type, CefRefPtr<CefCommandLine> command_line)
-{
-
-  command_line->AppendSwitch("off-screen-rendering-enabled");
-  command_line->AppendSwitchWithValue("off-screen-frame-rate", "60");
-  command_line->AppendSwitch("enable-media-stream");
-  //command_line->AppendSwitch("enable-bleeding-edge-rendering-fast-paths");
-
+	// Add the string to the window object as "window.myval". See the "JS Objects" section below.
+	object->SetValue("blu_event", func, V8_PROPERTY_ATTRIBUTE_NONE);
 }
