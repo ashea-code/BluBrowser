@@ -21,7 +21,7 @@ set(CEFSIMPLE_SRCS_LINUX
   )
 set(CEFSIMPLE_SRCS_MACOSX
   cefsimple_mac.mm
-  simple_handler_mac.mm
+  blu_handler_mac.mm
   )
 set(CEFSIMPLE_SRCS_WINDOWS
   cefsimple.exe.manifest
@@ -47,7 +47,7 @@ set(CEFSIMPLE_SRCS
 
 # cefsimple helper sources.
 set(CEFSIMPLE_HELPER_SRCS_MACOSX
-  process_helper_mac.cpp
+  process_helper_mac.cc
   )
 APPEND_PLATFORM_SOURCES(CEFSIMPLE_HELPER_SRCS)
 source_group(cefsimple FILES ${CEFSIMPLE_HELPER_SRCS})
@@ -78,9 +78,10 @@ set(CEFSIMPLE_RESOURCES_SRCS
 #
 
 # Target executable names.
-set(CEF_TARGET "cefsimple")
+set(CEF_TARGET "blu_ue4_process")
 if(OS_MACOSX)
-  set(CEF_HELPER_TARGET "cefsimple Helper")
+  set(CEF_COMPILER_FLAGS           "${CEF_COMPILER_FLAGS} -mmacosx-version-min=10.7")
+  set(CEF_HELPER_TARGET "blu_ue4_process Helper")
 endif()
 
 # Logical target used to link the libcef library.

@@ -6,7 +6,8 @@ class BluScriptHandler : public CefV8Handler {
 
 public:
 
-	BluScriptHandler::BluScriptHandler(CefRefPtr<CefBrowser> browser);
+//	BluScriptHandler::BluScriptHandler(CefRefPtr<CefBrowser> browser);
+	BluScriptHandler(CefRefPtr<CefBrowser> browser);
 
 	CefRefPtr<CefBrowser> browser;
 
