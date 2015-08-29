@@ -1,5 +1,5 @@
---- ./cefbuild/cef/libcef/resources/framework-Info.plist	2015-08-29 10:30:35.441887600 -0400
-+++ "./cefbuild/cef/libcef/resources/framework-Info - Copy.plist"	2015-08-29 10:32:22.364020900 -0400
+--- framework-Info.plist	2015-08-29 11:11:29.720900500 -0400
++++ framework-Info_new.plist	2015-08-29 11:13:29.611784400 -0400
 @@ -7,7 +7,7 @@
  	<key>CFBundleExecutable</key>
  	<string>${EXECUTABLE_NAME}</string>
