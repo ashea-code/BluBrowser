@@ -1,0 +1,11 @@
+--- ./cefbuild/cef/libcef/resources/framework-Info.plist	2015-08-29 10:30:35.441887600 -0400
++++ "./cefbuild/cef/libcef/resources/framework-Info - Copy.plist"	2015-08-29 10:32:22.364020900 -0400
+@@ -7,7 +7,7 @@
+ 	<key>CFBundleExecutable</key>
+ 	<string>${EXECUTABLE_NAME}</string>
+ 	<key>CFBundleIdentifier</key>
+-	<string>org.chromium.ContentShell.framework</string>
++	<string>org.chromium.ContentShell.BLUI.framework</string>
+ 	<key>CFBundleInfoDictionaryVersion</key>
+ 	<string>6.0</string>
+ 	<key>CFBundlePackageType</key>
