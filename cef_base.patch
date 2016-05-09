@@ -1,0 +1,23 @@
+--- cef_base.h	2016-05-05 11:36:43.703458900 -0400
++++ cef_base.h	2016-05-09 13:29:12.757864200 -0400
+@@ -113,17 +113,17 @@
+ ///
+ #define IMPLEMENT_REFCOUNTING(ClassName)            \
+   public:                                           \
+-    void AddRef() const OVERRIDE {                  \
++    void AddRef() const override {                  \
+       ref_count_.AddRef();                          \
+     }                                               \
+-    bool Release() const OVERRIDE {                 \
++    bool Release() const override {                 \
+       if (ref_count_.Release()) {                   \
+         delete static_cast<const ClassName*>(this); \
+         return true;                                \
+       }                                             \
+       return false;                                 \
+     }                                               \
+-    bool HasOneRef() const OVERRIDE {               \
++    bool HasOneRef() const override {               \
+       return ref_count_.HasOneRef();                \
+     }                                               \
+   private:                                          \
